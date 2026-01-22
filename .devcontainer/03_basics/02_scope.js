@@ -47,9 +47,9 @@ function addOne(num)
 return num+1
 }
 //console.log(addOne(5));
-console.log(addTwo(5));
+//console.log(addTwo(5));//not execute before function
 const addTwo=function(num) 
 {
     return num+2
 }
-//console.log(addTwo(5));
+console.log(addTwo(9));
