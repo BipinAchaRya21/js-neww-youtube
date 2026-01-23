@@ -2,7 +2,7 @@
 (function chai(){//named function
     //console.log("This function runs immediately upon defintion");
     console.log(`DB CONNECTED`);
-})();
+})();//gobal scope variable pollution avoid garna lai
 // () defintion + () exectution//()()//IIFE
 (function aurcode(){
     console.log(`DB CONNECTED TWO`);
