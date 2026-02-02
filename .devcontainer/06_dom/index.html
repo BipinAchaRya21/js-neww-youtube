@@ -9,3 +9,51 @@
   here i am to learn dom manipulation 
 </body>
 </html>
+
+<!DOCTYPE html>
+<!-- Document type declaration: HTML5 -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <!-- Page title shown in the browser tab -->
+  <title>Dom learning</title>
+<style>
+    /* CSS class that sets a black background and white text color */
+    .bg-black{
+        background-color: black;
+        color:white;
+    }
+</style>
+</head>
+<body class="bg-black">
+    <!-- Main wrapper container -->
+    <div>
+  <!-- Primary heading (has an id for DOM selection and a class for styling) -->
+  <h1 id="title" class="heading">Dom learning on chai aur code
+  <!-- Hidden span: present in the DOM but not visible due to inline style -->
+  <span style="display:none;">this is none display part.</span></h1>
+
+  <!-- Sub headings -->
+  <h2>This is a heading 2</h2>
+  <h2>this is a heading 3</h2>
+
+  <!-- Sample paragraph text -->
+  <p>Lorem ipsum dolor sit amet.</p>
+
+  <!-- Password input field (no name/id provided, so not easily accessible in scripts) -->
+  <input type="password" name="" id="">
+
+  <!-- Unordered list: list items share a class for potential styling or scripting -->
+  <ul>
+    <li class="list-item">item 1</li>
+    <li class="list-item">item 2</li>
+    <li class="list-item">item 3</li>
+    <li class="list-item">item 4</li>
+  </ul>
+
+  <!-- Anchor linking to a local DOM practice page inside the devcontainer -->
+  <a href=".devcontainer/06_dom/index.html">Go to DOM Practice</a>
+  </div>
+</body>
+</html>
+
