@@ -57,3 +57,42 @@
 </body>
 </html>
 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+ 
+  <title>Document</title>
+</head>
+<body style="background-color: rgb(11, 230, 230); color: black;">
+ <div class="parent">
+  <div class="day">Monday</div>
+  <div class="day">tuesday</div>
+  <div class="day">wednesday</div>
+  <div class="day">thursday</div>
+ </div>
+</body>
+<script>
+  const parent=document.querySelector('.parent');
+ // console.log(parent);
+ // console.log(parent.children);
+  //console.log(parent.children[1].innerHTML);
+  for(let i=0;i<parent.children.length;i++){
+    parent.children[i].style.backgroundColor='yellow';
+    parent.children[i].style.margin='10px';
+    parent.children[i].style.padding='10px';
+    parent.children[i].style.textTransform='capitalize';
+    parent.children[i].style.fontSize='20px';
+    parent.children[i].style.fontWeight='bold';
+    parent.children[i].style.border='2px solid black';
+    console.log(parent.children[i].innerHTML);
+  }
+  parent.firstElementChild.style.backgroundColor='red';
+  const dayOne=document.querySelector('.day');
+  console.log(dayOne);
+  console.log(dayOne.parentElement);
+  console.log(dayOne.nextElementSibling);
+  console.log("NODES:",parent.childNodes);
+  </script>
+</html>
