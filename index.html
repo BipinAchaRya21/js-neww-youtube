@@ -20,9 +20,37 @@
    </div>
 </body>
 <script>
-  document.getElementById('bhusal').onclick=function(){
-    alert('bhusal clicked')
+ // document.getElementById('bhusal').onclick=function(){
+   // alert('bhusal clicked')
+ // }
+  //attachEvent()
+  //jquery-on
+  //type,timestamp,defaultPrevented
+  //target,toelement,srcElement,customEvent,currentTarget
+  //clientx,ctrlkey,shiftkey,altkey,metakey,keycode
+
+ /* document.getElementById('images').addEventListener('click',function(e)
+{
+  console.log("clicked inside the ul");
+},false);
+document.getElementById('bhusal').addEventListener('click',function(e){
+  console.log("bhusal clicked");
+  e.stopPropagation();
+});
+document.getElementById('google').addEventListener('click',function(e){
+  console.log("google clicked");
+  e.preventDefault();
+});*/
+document.querySelector('#images').addEventListener('click',function(e){
+  console.log(e.target.tagName);
+  if(e.target.tagName=='IMG')
+  {
+    console.log("image clicked");
   }
+  let removeIt=e.target.parentNode;
+  removeIt.parentNode.removeChild(removeIt);
+  //removeIt.remove();
+})
 
 
     </script>
