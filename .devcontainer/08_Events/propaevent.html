@@ -1,4 +1,4 @@
-// Events in javascript
+<!--Events in javascript --> 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,12 +6,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>html events</title>
 </head>
-<body style="background-color: black; color:aliceblue">
+<body style="background-color: blueviolet; color:aliceblue">
    <h2>Amazing images</h2> 
    <div>
     <ul id="images">
-        <li><img width="200px" id="bhusal"src="nicolas.jpg" alt="bhusal"></li>
+        <li><img width="100px" id="bhusal"src=".devcontainer/nicolas.jpg" alt="bhusal"></li>
+        <li><img width="100px" id="prachu"src=".devcontainer/prachanda.jpg" alt="prachu"></li>
+<li><img width="100px" id="balun"src=".devcontainer/balen.jpg" alt="balun"></li>
+<li><img width="100px" id="kp"src=".devcontainer/oli.jpg" alt="kp"></li>
+<li><img width="100px" id="bipu"src=".devcontainer/bipinmechi.jpg" alt="bipu"></li>
+<li> <a style="color: aqua;"href="https://www.google.com"id="google">Google</a></li>
     </ul>
    </div>
 </body>
+<script>
+ // document.getElementById('bhusal').onclick=function(){
+   // alert('bhusal clicked')
+ // }
+  //attachEvent()
+  //jquery-on
+  //type,timestamp,defaultPrevented
+  //target,toelement,srcElement,customEvent,currentTarget
+  //clientx,ctrlkey,shiftkey,altkey,metakey,keycode
+
+ /* document.getElementById('images').addEventListener('click',function(e)
+{
+  console.log("clicked inside the ul");
+},false);
+document.getElementById('bhusal').addEventListener('click',function(e){
+  console.log("bhusal clicked");
+  e.stopPropagation();
+});
+document.getElementById('google').addEventListener('click',function(e){
+  console.log("google clicked");
+  e.preventDefault();
+});*/
+document.querySelector('#images').addEventListener('click',function(e){
+  console.log(e.target.tagName);
+  if(e.target.tagName=='IMG')
+  {
+    console.log("image clicked");
+  }
+  let removeIt=e.target.parentNode;
+  removeIt.parentNode.removeChild(removeIt);
+  //removeIt.remove();
+})
+
+
+    </script>
 </html>
