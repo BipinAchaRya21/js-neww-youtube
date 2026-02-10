@@ -1,0 +1,27 @@
+<!-- This is the async section about setInterval and clearInterval -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+ </head>
+ <body>
+  <h1>Chai aur Javascript</h1>
+  <button id="Start">Start</button>
+  <button id="Stop">Stop</button>
+ </body>
+ <script>
+ const SayDate=function(str){
+console.log(str,Date.now());
+ }
+ let interValid;
+ document.getElementById('Start').addEventListener('click',function(e){
+  interValid=setInterval(SayDate,3000,"Bipin is saying the date and time is:");
+ });
+ document.getElementById('Stop').addEventListener('click',function(e){
+  clearInterval(interValid);
+  console.log("Stopped");
+ })
+ </script>
+ </html>
