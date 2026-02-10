@@ -1,0 +1,29 @@
+<!--This is the async section of the course and it is about setTimeout() and clearTimeout() -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+ <h1>Chai Aur Code! </h1> 
+ <button id="Stop">Stop</button>
+</body>
+<script>
+ /* const Saybipin=function(){
+    console.log("Bipin is saying Hello");
+  }*/
+  const changeText=function(){
+    document.querySelector('h1').innerHTML="Bipin is saying Hello guys";
+  }
+  const changeMe=setTimeout(changeText,5000);
+  //const sayMe=setInterval(Saybipin,2000);
+  document.querySelector('#Stop').addEventListener('click',function(){
+    clearTimeout(changeMe);
+    //clearInterval(sayMe);
+    console.log("Stopped");
+  })
+  
+</script>
+</html>
